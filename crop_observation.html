@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Observation</title>
+    <link rel="stylesheet" href="output.css"> <!-- Local Tailwind CSS -->
+</head>
+<body class="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-green-500 to-sky-400">
+    <h1 class="text-4xl mb-6 text-green-700">
+        Crop Observation Model
+    </h1>
+    
+
+    <button type="button" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+        onclick="uploadImage()">Upload Image</button>
+    <input type="file" id="imageInput" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
+
+    <div id="webcam-container" class="mt-6 w-80 h-60 border-2 border-blue-600 rounded-lg shadow-lg"></div>
+    <canvas id="uploaded-image-container" class="hidden w-80 h-60 mt-6"></canvas>
+    <div id="label-container" class="mt-4 bg-white p-4 rounded-lg shadow-md w-full max-w-sm"></div>
+    <div id="treatment-container" class="mt-4 text-lg"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script/co.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+Sr. No.	State/Region	Soil Type	N (Nitrogen)	P (Phosphorus)	K (Potassium)	Recommended Crop
+1	Jammu & Kashmir	    Alluvial	120	            60	30	Rice (K)
+2	Himachal Pradesh	Alluvial	150	50	25	Wheat
+3	Uttarakhand	Alluvial	100	60	40	Maize
+4	Assam	Alluvial	80	40	40	Rice (K)
+5	West Bengal	Alluvial	150	75	75	Potato
+6	Arunachal Pradesh	Alluvial	80	40	40	Rice (R)
+7	Sikkim	Alluvial	80	40	40	Rice (R)
+8	Nagaland	Lateritic	120	75	50	Tea
+9	Manipur	Lateritic	90	60	60	Pineapple
+10	Uttar Pradesh (Middle)	Alluvial	120	60	30	Rice
+11	Bihar	Alluvial	100	40	20	Wheat
+12	Maharashtra (Western)	Black	120	60	60	Cotton
+13	Madhya Pradesh (Western)	Black	90	30	30	Soybean
+14	Chhattisgarh	Red	60	40	20	Groundnut
+15	Jharkhand	Lateritic	60	30	30	Pulses
+16	Kerala	Lateritic	90	60	30	Coconut
+17	Odisha	Alluvial	100	50	50	Rice
+18	Tamil Nadu (Southern)	Red	60	30	30	Ragi
+19	Gujarat	Sandy	150	50	25	Wheat
+20	Rajasthan	Sandy	60	40	40	Mustard
