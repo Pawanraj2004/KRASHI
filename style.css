@@ -1,24 +1,22 @@
-
 .features{
-    display: flex;
+    display:flex;
+    flex-direction: row;
     justify-content:space-evenly;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    /* gap: 5rem; */
+    gap: 5rem;
 
 }
 .features-card{
-    /* margin: 5px; */
+    margin: 2px; 
 }
 .features-h{
-    /* font-family: ;
-     */
-     font-size: 3rem !important;
+    font-size: 3rem !important;
     font-family: "Playwrite GB S", cursive;
 
 }
-/* Ensure all images inside cards have the same size */
+
 .features-card img {
     height: 200px; /* Set the desired uniform height */
     width: 100%; /* Make the image take the full width of the card */
@@ -26,9 +24,6 @@
     object-position: center; /* Center the image */
     
   }
-  /* .features-outer{
-    width: 50rem;
-  } */
   
 .btn-color{
     background-color: #5c7726;
