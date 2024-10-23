@@ -7,93 +7,124 @@
   <title>KRASHI</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="output.css"> <!-- Local Tailwind CSS file -->
+  <link rel="stylesheet" href="output.css">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
-    rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(255, 255, 255, 0) !important">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(255, 255, 255, 0.034);">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">KRASHI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto list">
-
-            <button type="button" class="btn list-items btn-color "> <a href="crop_observation.html">Crop
-                Observation</a></button>
-            <button type="button" class="btn btn-color list-items"><a href="crop_monitoring.html">Crop
-                Monitoring</a></button>
-            <button type="button" class="btn btn-color list-items"><a href="crop_recommendation.html">Crop
-                Recommendation</a></button>
-
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link btn btn-color" href="crop_observation.html">Crop Observation</a>
+            <a class="nav-link btn btn-color" href="crop_monitoring.html">Crop Monitoring</a>
+            <a class="nav-link btn btn-color" href="crop_recommendation.html">Crop Recommendation</a>
           </div>
         </div>
       </div>
     </nav>
   </header>
+
   <main>
-
-    <div class="card text-bg-dark card-style">
-      <img src="/krashi_bg_.jpeg" class="card-img bg-img" alt="...">
-      <div class="card-img-overlay" style="height:90vh">
-        <h5 class="card-title  title">KRASHI</h5>
-        <p class="card-text text">Knowledgeable Resourses for Agricultural Solutions and Harvesting Insights</p>
-
-      </div>
-    </div>
-    </div>
-    <div class="d-flex justify-content-center align-items-center container  flex-row" style="height: 80vh;">
-      <p class="features-h">KRASHI Features</p>
-      <div class="container d-flex  .flex-column justify-content-between flex-wrap" >
-        <div class="card  features-card" style="width: 25rem;">
-          <img src="/crop_observe.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Crop Observation</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card  features-card" style="width: 25rem;">
-          <img src="/crop_monitor.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Crop Monitoring</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-        <div class="card  features-card" style="width: 25rem;">
-          <img src="/crop_recommend.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
+    <section class="hero">
+      <div class="card text-bg-dark card-style">
+        <img src="/krashi_bg_.jpeg" class="card-img bg-img" alt="Background Image">
+        <div class="card-img-overlay d-flex flex-column  align-items-center" style="height: 90vh;">
+          <h1 class="title">KRASHI</h1>
+          <p class="text">Knowledgeable Resources for Agricultural Solutions and Harvesting Insights</p>
         </div>
       </div>
-    </div>
-    <div class="team container">
+    </section>
 
+    <section class="features container">
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h2 class="features-h">KRASHI Features</h2>
+        </div>
+        <div class="col-12 d-flex justify-content-center flex-wrap">
+          <article class="card features-card" style="width: 19rem;">
+            <img src="/crop_observe.jpg" class="card-img-top" alt="Crop Observation">
+            <div class="card-body">
+              <h5 class="card-title title-features">Crop Observation</h5>
+              <p class="card-text">Quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Examine</a>
+            </div>
+          </article>
+          <article class="card features-card" style="width: 19rem;">
+            <img src="/crop_monitor.jpg" class="card-img-top" alt="Crop Monitoring">
+            <div class="card-body">
+              <h5 class="card-title title-features">Crop Monitoring</h5>
+              <p class="card-text">Quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Examine</a>
+            </div>
+          </article>
+          <article class="card features-card" style="width: 19rem;">
+            <img src="/crop_recommend.jpg" class="card-img-top" alt="Crop Recommendation">
+            <div class="card-body">
+              <h5 class="card-title title-features">Crop Recommendation</h5>
+              <p class="card-text">Quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Examine</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <footer>
-
-      </footer>
+    <section class="team container">
+      <h2 class="team-h">Our Team</h2>
+      <div class="d-flex justify-content-center flex-wrap">
+        <div class="card team-card" style="width: 18rem;">
+          <img src="/team_member.jpg" class="card-img-top" alt="Team Member">
+          <div class="card-body">
+            <h5 class="card-title">Shreya</h5>
+            <p class="card-text">Brief description of the team member.</p>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="card team-card" style="width: 18rem;">
+          <img src="/team_member.jpg" class="card-img-top" alt="Team Member">
+          <div class="card-body">
+            <h5 class="card-title">Pawanraj</h5>
+            <p class="card-text">Brief description of the team member.</p>
+            <a href="#" ><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="card team-card" style="width: 18rem;">
+          <img src="/team_member.jpg" class="card-img-top" alt="Team Member">
+          <div class="card-body">
+            <h5 class="card-title">Pukhraj</h5>
+            <p class="card-text">Brief description of the team member.</p>
+            <a href="#" ><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="card team-card" style="width: 18rem;">
+          <img src="/team_member.jpg" class="card-img-top" alt="Team Member">
+          <div class="card-body">
+            <h5 class="card-title">Sanskar</h5>
+            <p class="card-text">Brief description of the team member.</p>
+            <a href="#" ><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <!-- Repeat for additional team members as needed -->
+      </div>
+    </section>
   </main>
-  <script src="  https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <footer class="bg-light text-center py-2">
+    <p>© 2024 KRASHI. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
