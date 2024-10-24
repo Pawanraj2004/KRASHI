@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Monitoring Dashboard</title>
-    <link rel="stylesheet" href="output.css"> <!-- Local Tailwind CSS -->
+    <link rel="stylesheet" href="../output.css"> <!-- Local Tailwind CSS -->
     <script src="script/cm.js" defer></script>
+    
+<%- include('head.ejs'); -%>
 </head>
 <body class="bg-gradient-to-r from-green-500 to-sky-400 min-h-screen flex flex-col items-center justify-center">
+    <%- include('nav.ejs'); -%>
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-5xl text-center">
         <h1 class="text-3xl font-bold text-green-700 mb-6">Crop Monitoring System</h1>
         <div class="flex flex-wrap gap-6 justify-center">

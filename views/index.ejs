@@ -13,23 +13,7 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(255, 255, 255, 0.034);">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">KRASHI</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link btn btn-color" href="crop_observation.html">Crop Observation</a>
-            <a class="nav-link btn btn-color" href="crop_monitoring.html">Crop Monitoring</a>
-            <a class="nav-link btn btn-color" href="crop_recommendation.html">Crop Recommendation</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <%- include('nav.ejs'); -%>
 
   <main>
     <section class="hero">
@@ -37,15 +21,15 @@
         <img src="assets/krashi_bg_.jpeg" class="card-img bg-img" alt="Background Image">
         <div class="card-img-overlay d-flex flex-column  align-items-center" style="height: 90vh;">
           <h1 class="title">KRASHI</h1>
-          <p class="text">Knowledgeable Resources for Agricultural Solutions and Harvesting Insights</p>
+          <p class="text " >Knowledgeable Resources for Agricultural Solutions and Harvesting Insights</p>
         </div>
       </div>
     </section>
 
-    <section class="features container">
+    <section class="features ">
       <div class="row">
         <div class="col-12 text-center mb-4">
-          <h2 class="features-h">KRASHI Features</h2>
+          <p class="features-h">KRASHI Features</p>
         </div>
         <div class="col-12 d-flex justify-content-center flex-wrap">
           <article class="card features-card" style="width: 19rem;">
@@ -76,7 +60,7 @@
       </div>
     </section>
 
-    <section class="team container">
+    <section class="team ">
       <h2 class="team-h">Our Team</h2>
       <div class="d-flex justify-content-center flex-wrap">
         <div class="card team-card" style="width: 18rem;">

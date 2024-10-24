@@ -42,28 +42,35 @@ body {
   
   .bg-img {
     filter: blur(1.25px);
+   /* box-shadow: -8px 8px #333; */
+
   }
   
   .title {
-    /* text-align: center; */
-    margin-top: 5rem;
-    font-family: "Playwrite GB S", cursive;
-    font-size: 4rem;
+    text-align: center;
+    margin-top: 27rem;
+    
+
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+
+    font-size: 5rem;
     color: white;
-    font-weight: 900;
     text-shadow: 5px 8px 2px black;
-  }
+  } 
   
   .text {
     font-size: 1.5rem;
     text-align: center;
-    text-emphasis: circle;
+    /* text-emphasis: circle;  */
     color: white;
     font-weight: 900;
     text-shadow: -2px -3px 2px black;
   }
   
   .features {
+    margin-top: 2.5rem;
     padding: 3rem 0;
     text-align: center;
     
@@ -77,8 +84,13 @@ body {
   }
   
   .features-card {
-    margin: 0.5rem; /* Space between cards */
+    /* margin: 0.5rem; Space between cards */
+  transition: transform 0.3s ease-in-out; /* Adds smooth hover effect */
+
     
+  }
+  .features-card:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
   }
   
   .features-card img {
@@ -100,19 +112,27 @@ body {
   }
   
   .btn-color {
-    background-color: #99d42285;
-    color: white;
-    font-size: 1rem;
-    font-weight: 500;
-    text-shadow: 1.25px 1.25px 1px black;
+    /* background-color: #99d42285;
+     */
+     /* background-color: rgb(137, 201, 40); */
+    color: brown;
+  font-family: "Kanit", sans-serif;
+
+    font-size: 0.75rem;
+    /* font-weight: 500; */
+    /* text-shadow: -1.25px -1.25px 1px black; */
     margin-right: 1rem;
   }
   /* Team Section */
 .team {
   background-color: #99d42285; /* Matches your existing color */
   padding: 3rem 0; /* Adds some spacing */
-  border-radius: 20px; /* Rounds the section */
+  /* border-radius: 20px; Rounds the section */
   text-align: center; /* Centers the text */
+  /* width: 100vw !important; */
+  margin-bottom: 10px;
+  margin-top: 2.5rem;
+
 }
 
 .team-h {
@@ -124,8 +144,9 @@ body {
 }
 
 .team-card {
+  height: 55vh;
   margin: 1rem; /* Space between cards */
-  border-radius: 100px  100px 100px 100px; /* Slight rounding for card edges */
+  /* border-radius: 100px  100px 100px 100px; Slight rounding for card edges */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a light shadow for depth */
   transition: transform 0.3s ease-in-out; /* Adds smooth hover effect */
 }
@@ -135,7 +156,7 @@ body {
 }
 
 .team-card img {
-  height: 250px; /* Fixed height for consistency */
+  height: 150px; 
   object-fit: cover; /* Keeps the image proportions while filling the card */
   border-top-left-radius: 10px; /* Rounds the top corners */
   border-top-right-radius: 10px;
@@ -202,4 +223,33 @@ body {
       font-size: 2rem;
     }
   }
-  
+  @media (max-width: 576px) {
+    .title {
+      text-align: none;
+      margin-top:1rem;
+        font-size: 3rem;
+    }
+    .text {
+      font-size: 0.5rem;
+      text-align: center;
+      /* text-emphasis: circle;  */
+      color: white;
+      font-weight: 900;
+      text-shadow: -2px -3px 2px black;
+    }
+}
+@media (max-width: 768px) {
+  .title {
+    text-align: none;
+    margin-top:1rem;
+      font-size: 3rem;
+  }
+  .text {
+    font-size: 0.5rem;
+    text-align: center;
+    /* text-emphasis: circle;  */
+    color: white;
+    font-weight: 900;
+    text-shadow: -2px -3px 2px black;
+  }
+}
