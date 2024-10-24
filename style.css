@@ -1,20 +1,30 @@
-.features{
-    display:flex;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa00;
+}
+
+.hero {
+    position: relative;
+}
+
+.features {
+    display: flex;
     flex-direction: row;
-    justify-content:space-evenly;
-    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     gap: 5rem;
+}
 
+.features-card {
+    margin: 2px;
 }
-.features-card{
-    margin: 2px; 
-}
-.features-h{
+
+.features-h {
     font-size: 3rem !important;
     font-family: "Playwrite GB S", cursive;
-
 }
 
 .features-card img {
@@ -22,50 +32,174 @@
     width: 100%; /* Make the image take the full width of the card */
     object-fit: cover; /* Ensure the image covers the space without distortion */
     object-position: center; /* Center the image */
-    
+}
+
+  
+  .card-style {
+    border: none;
+    border-radius: 0;
   }
   
-.btn-color{
-    background-color: #5c7726;
-    color: white;
-    font-size: 1.02rem;
-    font-weight: 700;
-    text-shadow: 1.25px 1.25px  1px black;
-
-}
-.list-items{
-    margin-right: 2rem;
-}
-.card-style{
-    /* text-align: center; */
-    border: none;
-    border-radius: 0px 0px;
-    /* opacity: 0.89; */
-}
-.bg-img{
+  .bg-img {
     filter: blur(1.25px);
-
-}
-.title{
-    text-align: center;
+  }
+  
+  .title {
+    /* text-align: center; */
     margin-top: 5rem;
     font-family: "Playwrite GB S", cursive;
-    font-size: 6rem;
+    font-size: 4rem;
     color: white;
     font-weight: 900;
-    text-shadow: 5px 8px  2px black;
-}
-.text{
-    font-size:2rem;
-    /* font-family: "Oswald", sans-serif; */
+    text-shadow: 5px 8px 2px black;
+  }
+  
+  .text {
+    font-size: 1.5rem;
     text-align: center;
-    margin: 0 auto;
-     
+    text-emphasis: circle;
     color: white;
     font-weight: 900;
     text-shadow: -2px -3px 2px black;
-    text-emphasis: filled ;
-   
-
+  }
+  
+  .features {
+    padding: 3rem 0;
+    text-align: center;
+    
+  }
+  
+  .features-h {
+    font-size: 2rem;
+    font-family: "Playwrite GB S", cursive;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+  
+  .features-card {
+    margin: 0.5rem; /* Space between cards */
+    
+  }
+  
+  .features-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .title-features {
+    font-size: 1rem;
+    font-family: "Playwrite GB S", cursive;
+    /* padding: 1rem; */
+    text-align: center;
+    
+  }
+  .card-text{
+    font-size: 0.75rem;
+    padding: 10px 0px;
+  }
+  
+  .btn-color {
+    background-color: #99d42285;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    text-shadow: 1.25px 1.25px 1px black;
+    margin-right: 1rem;
+  }
+  /* Team Section */
+.team {
+  background-color: #99d42285; /* Matches your existing color */
+  padding: 3rem 0; /* Adds some spacing */
+  border-radius: 20px; /* Rounds the section */
+  text-align: center; /* Centers the text */
 }
- 
+
+.team-h {
+  font-size: 2rem;
+  font-family: "Playwrite GB S", cursive; /* Same font style */
+  font-weight: 700;
+  margin-bottom: 2rem; /* Adds space between heading and team cards */
+  color: #333; /* Darker color for the heading */
+}
+
+.team-card {
+  margin: 1rem; /* Space between cards */
+  border-radius: 100px  100px 100px 100px; /* Slight rounding for card edges */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a light shadow for depth */
+  transition: transform 0.3s ease-in-out; /* Adds smooth hover effect */
+}
+
+.team-card:hover {
+  transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+.team-card img {
+  height: 250px; /* Fixed height for consistency */
+  object-fit: cover; /* Keeps the image proportions while filling the card */
+  border-top-left-radius: 10px; /* Rounds the top corners */
+  border-top-right-radius: 10px;
+}
+
+.team-card .card-title {
+  font-size: 1.25rem;
+  font-family: "Playwrite GB S", cursive; /* Matches font style */
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.team-card .card-text {
+  font-size: 0.85rem;
+  color: #666; /* Lighter color for descriptions */
+  padding: 0.75rem 1rem;
+}
+
+.team-card .btn-primary {
+  background-color: #5c7726; /* Same button color as rest of site */
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .team-card {
+    width: 100%; /* Cards take full width on smaller screens */
+    margin-bottom: 1.5rem;
+  }
+}
+
+  footer {
+    /* padding: 1rem 0; */
+    background-color: #f8f9fa;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 0.65rem;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .features-card {
+      width: 100%;
+      margin-bottom: 1rem; /* Added spacing for smaller screens */
+    }
+    .title {
+      font-size: 4rem;
+    }
+    .features-h {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .title {
+      font-size: 3rem;
+    }
+    .features-h {
+      font-size: 2rem;
+    }
+  }
+  
