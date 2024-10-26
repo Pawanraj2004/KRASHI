@@ -8,6 +8,10 @@ body {
 .hero {
     position: relative;
 }
+.logo{
+  height: auto;
+  max-width: 120px;
+}
 
 .features {
     display: flex;
@@ -15,11 +19,11 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5rem;
+    gap: 15rem;
 }
 
 .features-card {
-    margin: 2px;
+    margin: 7px;
 }
 
 .features-h {
