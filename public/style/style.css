@@ -1,14 +1,39 @@
-/* body {
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa00; /* Added a light background color */
- /* } */
-  .head {
-  }
-  .hero {
+    background-color: #f8f9fa00;
+}
+
+.hero {
     position: relative;
-  }
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.features-card {
+    margin: 2px;
+}
+
+.features-h {
+    font-size: 3rem !important;
+    font-family: "Playwrite GB S", cursive;
+}
+
+.features-card img {
+    height: 200px; /* Set the desired uniform height */
+    width: 100%; /* Make the image take the full width of the card */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+    object-position: center; /* Center the image */
+}
+
   
   .card-style {
     border: none;
