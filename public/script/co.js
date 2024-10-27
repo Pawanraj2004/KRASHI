@@ -106,3 +106,35 @@ function hideWebcam() {
 
 // Load the model when the page loads
 window.onload = loadModel;
+
+function handleImageUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const img = new Image();
+        img.src = e.target.result;
+        img.className = 'img-thumbnail mt-3';
+        document.getElementById("image-preview").appendChild(img);
+        
+        img.onload = async function () {
+            hideWebcam();
+            const canvas = document.getElementById('uploaded-image-container');
+            const context = canvas.getContext('2d');
+            canvas.width = 320;
+            canvas.height = 240;
+
+            const scale = Math.min(canvas.width / img.width, canvas.height / img.height);
+            const x = (canvas.width / 2) - (img.width / 2) * scale;
+            const y = (canvas.height / 2) - (img.height / 2) * scale;
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.drawImage(img, x, y, img.width * scale, img.height * scale);
+
+            canvas.style.display = 'block';
+            await predict(canvas);
+            event.target.value = ''; // Reset file input
+        };
+    };
+    reader.readAsDataURL(file);
+}
