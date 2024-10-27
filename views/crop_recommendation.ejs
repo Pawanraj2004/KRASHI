@@ -4,100 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crop Recommendation System</title>
-    <link rel="stylesheet" href="output.css"> <!-- Local Tailwind CSS -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="output.css"> <!-- Additional custom CSS if needed -->
     <%- include('head.ejs'); -%>
 </head>
-<body class="bg-gradient-to-r from-green-500 to-sky-400 h-screen flex items-center justify-center">
+
+<body>
     <%- include('nav.ejs'); -%>
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-lg">
-        <h1 class="text-2xl font-bold text-green-700 mb-6 text-center">Crop Recommendation System</h1>
-        <form id="crop-form" class="flex flex-col gap-4">
-            <!-- Dropdown for Zone -->
-            <label for="zone" class="text-gray-700 font-semibold">Select Zone:</label>
-            <select id="zone" required class="p-2 border rounded-md">
-                <option value="">--Select State--</option>
-                <option value="Jammu & Kashmir">Jammu & Kashmir</option>
-                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                <option value="Uttarakhand">Uttarakhand</option>
-            
-                <option value="Assam">Assam</option>
-                <option value="West Bengal">West Bengal</option>
-                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                <option value="Sikkim">Sikkim</option>
-                <option value="Nagaland">Nagaland</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Meghalaya">Meghalaya</option>
-            
-                <option value="West Bengal">West Bengal</option>
-            
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                <option value="Bihar">Bihar</option>
-            
-                <option value="Uttar Pradesh">Uttar Pradesh</option>
-            
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Madhya Pradesh">Madhya Pradesh</option>
-            
-                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                <option value="Chhattisgarh">Chhattisgarh</option>
-            
-                <option value="Odisha">Odisha</option>
-                <option value="Jharkhand">Jharkhand</option>
-            
-                <option value="Goa">Goa</option>
-                <option value="Maharashtra">Maharashtra</option>
-                <option value="Kerala">Kerala</option>
-            
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                <option value="Odisha">Odisha</option>
-            
-                <option value="Nagaland">Nagaland</option>
-                <option value="Manipur">Manipur</option>
-                <option value="Mizoram">Mizoram</option>
-                <option value="Tripura">Tripura</option>
-            
-                <option value="Rajasthan">Rajasthan</option>
-                <option value="Gujarat">Gujarat</option>
-            
-                <option value="Tamil Nadu">Tamil Nadu</option>
-                <option value="Karnataka">Karnataka</option>
-            </select>
 
-            <!-- Dropdown for Soil Type -->
-            <label for="soil" class="text-gray-700 font-semibold">Select Soil Type:</label>
-            <select id="soil" required class="p-2 border rounded-md">
-                <option value="">--Select Soil Type--</option>
-                <option value="Red">Red</option>
-                <option value="Alluvial">Alluvial</option>
-                <option value="Lateritic">Lateritic</option>
-                <option value="Black">Black</option>
-                <option value="Desert">Desert</option>
-                <option value="Mountain">Mountain</option>
-                <option value="Sandy">Sandy</option>
-                <option value="Peaty">Peaty</option>
-                <option value="Loamy">Loamy</option>
-                <option value="Saline">Saline</option>
-            </select>
+    <!-- Main Form Container -->
+    <div class=" container bg-white p-5 rounded shadow-lg mt-5" style="max-width: 600px;background-color:#99d42285 !important">
+        <!-- Title Section -->
+        <h1 class="text-center  mb-4 fw-bold display-6" style="font-family: 'Playwrite GB S', serif; color:brown !important">
+            Crop Recommendation System
+        </h1>
 
-            <!-- Input for Nitrogen -->
-            <label for="nitrogen" class="text-gray-700 font-semibold">Nitrogen (N) value:</label>
-            <input type="number" id="nitrogen" name="nitrogen" required class="p-2 border rounded-md">
+        <!-- Form Section -->
+        <form id="crop-form">
+            <!-- Zone Dropdown -->
+            <div class=" mb-3">
+                <label for="zone" class="form-label fw-semibold text-secondary">Select Zone:</label>
+                <select id="zone" required class="form-select">
+                    <option value="">--Select State--</option>
+                    <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="Assam">Assam</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select>
+            </div>
 
-            <!-- Input for Phosphorus -->
-            <label for="phosphorus" class="text-gray-700 font-semibold">Phosphorus (P) value:</label>
-            <input type="number" id="phosphorus" name="phosphorus" required class="p-2 border rounded-md">
+            <!-- Soil Type Dropdown -->
+            <div class="mb-3">
+                <label for="soil" class="form-label fw-semibold text-secondary">Select Soil Type:</label>
+                <select id="soil" required class="form-select">
+                    <option value="">--Select Soil Type--</option>
+                    <option value="Red">Red</option>
+                    <option value="Alluvial">Alluvial</option>
+                    <option value="Lateritic">Lateritic</option>
+                    <option value="Black">Black</option>
+                    <option value="Desert">Desert</option>
+                    <option value="Mountain">Mountain</option>
+                    <option value="Sandy">Sandy</option>
+                    <option value="Peaty">Peaty</option>
+                    <option value="Loamy">Loamy</option>
+                    <option value="Saline">Saline</option>
+                </select>
+            </div>
 
-            <!-- Input for Potassium -->
-            <label for="potassium" class="text-gray-700 font-semibold">Potassium (K) value:</label>
-            <input type="number" id="potassium" name="potassium" required class="p-2 border rounded-md">
+            <!-- Nitrogen Input -->
+            <div class="mb-3">
+                <label for="nitrogen" class="form-label fw-semibold text-secondary">Nitrogen (N) value:</label>
+                <input type="number" id="nitrogen" name="nitrogen" required class="form-control" placeholder="Enter Nitrogen value">
+            </div>
 
-            <button type="submit" class="bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+            <!-- Phosphorus Input -->
+            <div class="mb-3">
+                <label for="phosphorus" class="form-label fw-semibold text-secondary">Phosphorus (P) value:</label>
+                <input type="number" id="phosphorus" name="phosphorus" required class="form-control" placeholder="Enter Phosphorus value">
+            </div>
+
+            <!-- Potassium Input -->
+            <div class="mb-3">
+                <label for="potassium" class="form-label fw-semibold text-secondary">Potassium (K) value:</label>
+                <input type="number" id="potassium" name="potassium" required class="form-control" placeholder="Enter Potassium value">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn  w-100 mt-3 " style="background-color: brown; color:white">
                 Recommend Crop
             </button>
         </form>
-        <div id="result" class="mt-4 text-lg font-bold"></div>
+
+        <!-- Result Section -->
+        <div id="result" class="mt-4 text-center fs-5 fw-bold text-success"></div>
     </div>
+
+    <!-- Optional Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script/cr.js"></script>
 </body>
 </html>
