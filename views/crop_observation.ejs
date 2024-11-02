@@ -16,40 +16,51 @@
     <%- include('nav.ejs'); -%>
 
     <!-- Title Section -->
-    <h1 class="display-6  fw-bold text-center mb-5" style="font-family: 'Playwrite GB S', serif; color: brown;">
+    <h1 class="display-6 fw-bold text-center mb-5" style="font-family: 'Playwrite GB S', serif; color: brown;">
         Crop Observation Model
     </h1>
 
-    <!-- Container for Upload Button, Webcam, and Canvas -->
-    <div class="container text-center">
-        <!-- Upload Button and Input Section -->
-        <div class="mb-3">
-            <button type="button" class="btn mb-3" style="background-color: #99d42285;" onclick="uploadImage()">Upload Image</button>
-            <input type="file" id="imageInput" accept="image/*" class="d-none" onchange="handleImageUpload(event)">
-        </div>
-
-        <!-- Webcam and Canvas Container -->
-        <div class="row justify-content-center mb-3">
-            <div class="col-md-6">
-                <div id="webcam-container" class="border border-success rounded shadow-lg p-3 mb-3" style="height: 300px;"></div>
-            </div>
-        </div>
+    <!-- Container for Lottie Animation and Observation Section -->
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-6">
-                <canvas id="uploaded-image-container" class="d-none border border-secondary rounded shadow-lg" style="width: 100%; height: 300px;"></canvas>
+            <!-- Left Column: Lottie Animation -->
+            <div class="col-md-4 d-flex align-items-center justify-content-center">
+                <lottie-player src="https://lottie.host/dd5f021d-9639-4259-9728-a5669ef40450/dtUxoiTXgt.json" background="##fff" speed="2.0" style="width: 500px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+            </div>
+
+            <!-- Right Column: Observation Section -->
+            <div class="col-md-8 text-center">
+                <!-- Upload Button and Input Section -->
+                <div class="mb-3">
+                    <button type="button" class="btn mb-3" style="background-color: #99d42285;" onclick="uploadImage()">Upload Image</button>
+                    <input type="file" id="imageInput" accept="image/*" class="d-none" onchange="handleImageUpload(event)">
+                </div>
+
+                <!-- Webcam and Canvas Container -->
+                <div class="row justify-content-center mb-3">
+                    <div class="col-md-8">
+                        <div id="webcam-container" class="border border-success rounded shadow-lg p-3 mb-3" style="height: 300px;"></div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <canvas id="uploaded-image-container" class="d-none border border-secondary rounded shadow-lg" style="width: 100%; height: 300px;"></canvas>
+                    </div>
+                </div>
+
+                <div id="image-preview" class="mt-3"></div> <!-- Add an image preview container -->
+
+                <!-- Labels and Treatment Section -->
+                <div id="label-container" class="mt-4 bg-light p-4 rounded shadow text-center w-100 max-w-md mx-auto"></div>
+                <div id="treatment-container" class="mt-4 text-center fs-5 text-dark"></div>
             </div>
         </div>
-
-        <div id="image-preview" class="mt-3"></div> <!-- Add an image preview container -->
-
-        <!-- Labels and Treatment Section -->
-        <div id="label-container" class="mt-4 bg-light p-4 rounded shadow text-center w-100 max-w-md mx-auto"></div>
-        <div id="treatment-container" class="mt-4 text-center fs-5 text-dark"></div>
     </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
     <script src="script/co.js"></script>
 </body>
 </html>
